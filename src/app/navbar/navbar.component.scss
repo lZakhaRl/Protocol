@@ -1,0 +1,134 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  background: #fcfcfd;
+  border-right: 1px solid #e6e8ec;
+  min-height: 100vh;
+  width: 20vw;
+  float: left;
+}
+.navbar_header {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  padding-left: 29px;
+  min-height: 64px;
+  border-bottom: 1px solid #e6e8ec;
+}
+.navbar_title {
+  font-family: "Philosopher", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: #353945;
+  margin: auto 0;
+}
+
+.navbar_logo {
+  margin-right: 9px;
+  height: auto;
+}
+
+.navbar_inner {
+  flex: 1 0 auto;
+  position: relative;
+  margin-top: 28px;
+}
+
+.navbar_content-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+
+  text-decoration: none;
+
+  &:hover .navbar_content-text {
+    color: #63960b;
+  }
+  &:hover .navbar_content-icon {
+    fill: #63960b;
+  }
+
+  &::before {
+    content: "";
+    width: 0;
+    height: 56px;
+    background: #63960b;
+    border-radius: 15px;
+    transition: width 0.2s linear;
+  }
+
+  &:hover::before {
+    width: 3px;
+  }
+}
+
+.navbar_content-icon {
+  width: 50px;
+  height: 50px;
+  fill: #777e91;
+  padding-left: 26px;
+  transition: fill 0.2s linear;
+}
+
+.navbar_content-text {
+  font-weight: 600;
+  font-size: 1.5rem;
+
+  color: #777e90;
+
+  padding-left: 22px;
+  transition: color 0.2s linear;
+}
+
+.navbar_content-version {
+  font-weight: 600;
+  font-size: 1.4rem;
+  position: absolute;
+  bottom: 13px;
+  left: 10px;
+}
+
+.navbar_footer {
+  flex: 0 0 auto;
+}
+
+.social {
+  display: flex;
+  height: 50px;
+  justify-content: center;
+}
+
+.social_items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  border: 1px solid #e6e8ec;
+  transition: background-color 0.2s linear;
+
+  &:hover {
+    background-color: #d0d6d2;
+  }
+}
+
+.navbar_footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+
+  a {
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #425466;
+
+    margin-left: 10px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

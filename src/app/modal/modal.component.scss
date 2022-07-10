@@ -1,0 +1,133 @@
+.modal {
+  display: flex;
+  background-color: #fff;
+  border-radius: 5%;
+}
+
+.modal_container {
+  width: 563px;
+  height: 368px;
+}
+
+.modal_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal_header-title {
+  font-weight: 600;
+  font-size: 2.4rem;
+  color: #23262f;
+  margin: 0;
+}
+
+.modal_close {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #e6e8ec;
+  border-radius: 50%;
+  outline: none;
+}
+.modal_close:before,
+.modal_close:after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  width: 2px;
+  height: 14px;
+}
+.modal_close:before {
+  left: calc(50% - 1px);
+  border-left: 2px solid #23262f;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.modal_close:after {
+  right: calc(50% - 1px);
+  border-right: 2px solid #23262f;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.modal_close:hover:before,
+.modal_close:hover:after {
+  border-color: #f00;
+}
+
+.modal_content {
+  margin-top: 32px;
+}
+
+.modal_inner {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  flex-wrap: wrap;
+}
+
+.modal_content-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 47%;
+  height: 136px;
+  margin-bottom: 24px;
+  border: 1px solid #e6e8ec;
+  border-radius: 8px;
+  cursor: pointer;
+
+  text-decoration: none;
+  position: relative;
+  transition: box-shadow 0.2s linear;
+
+  &.blocked {
+    background-color: #b1b5c3;
+    opacity: 0.7;
+    cursor: auto;
+
+    &:hover {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+  &:hover {
+    -webkit-box-shadow: 0px 0px 47px 14px rgba(3, 11, 17, 0.2);
+    -moz-box-shadow: 0px 0px 47px 14px rgba(3, 11, 17, 0.2);
+    box-shadow: 0px 0px 47px 14px rgba(3, 11, 17, 0.2);
+  }
+}
+
+.blocked_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: #fff;
+  border-radius: 50%;
+
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  z-index: 1;
+}
+
+.item_text {
+  margin-top: 17px;
+
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #23262f;
+  text-transform: uppercase;
+}
+
+::ng-deep.mat-dialog-container {
+  border-radius: 5% !important;
+}
